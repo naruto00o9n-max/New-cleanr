@@ -1,0 +1,10 @@
+services:
+  bot:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    init: true
+    volumes:
+      - cleaner-data:/app/data
+volumes:
+  cleaner-data:

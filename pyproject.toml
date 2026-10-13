@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "manhwa-discord-cleaner"
+version = "2.0.0"
+requires-python = ">=3.11"
+dependencies = ["numpy==1.26.4", "opencv-python-headless==4.10.0.84", "Pillow==10.4.0", "httpx>=0.28,<0.29", "python-dotenv>=1,<2", "discord.py>=2.5,<3", "torch>=2.5,<2.6"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+
+[project.scripts]
+manhwa-cleaner = "manga_cleaner.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["manga_cleaner*"]

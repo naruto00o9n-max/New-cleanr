@@ -1,0 +1,16 @@
+[Unit]
+Description=Manhwa Discord Cleaner
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/manhwa-discord-cleaner
+ExecStart=/opt/manhwa-discord-cleaner/.venv/bin/python -u -m manga_cleaner.cli bot
+Restart=on-failure
+RestartSec=5
+KillSignal=SIGINT
+TimeoutStopSec=90
+
+[Install]
+WantedBy=multi-user.target
