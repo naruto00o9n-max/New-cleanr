@@ -101,3 +101,41 @@ def test_flat_bubble_removes_fine_strokes_without_neural_model(tmp_path):
     assert (result[110,155] == 255).all()
     assert np.array_equal(result[40,150],rgb[40,150])
     assert report['flat_regions'] == 1
+
+
+def test_smooth_colour_field_reconstructs_gradient_without_text_halo():
+    from manga_cleaner.pipeline import smooth_background
+    yy,xx=np.mgrid[:120,:180]
+    expected=np.stack((220+xx*.05+yy*.1,225+xx*.05+yy*.08,235+xx*.05+yy*.05),axis=-1).round().astype(np.uint8)
+    crop=expected.copy();crop[40:80,60:120]=0
+    safe=np.ones((120,180),bool);safe[35:85,55:125]=False
+    field=smooth_background(crop,safe)
+    assert field is not None
+    assert np.max(abs(field.astype(int)-expected.astype(int))) <= 1
+
+
+def test_pale_text_outline_is_removed_even_if_segmentation_only_sees_dark_ink(tmp_path):
+    im=Image.new('RGB',(300,300),(240,240,245))
+    draw=ImageDraw.Draw(im);draw.ellipse((40,40,260,260),outline=(0,0,0),width=3)
+    draw.rectangle((92,92,158,128),fill='white');draw.rectangle((100,100,150,120),fill='black')
+    class InkOnly:
+        calls=0
+        def predict(self,rgb):
+            mask=np.zeros(rgb.shape[:2],bool)
+            if self.calls == 0: mask[100:121,100:151]=True
+            self.calls+=1
+            return [(90,90,80,50,.9)],mask
+    class NoNeural:
+        def predict(self,*args): raise AssertionError('Uniform bubble')
+    report=Pipeline(Settings(),InkOnly(),NoNeural()).clean(png(np.asarray(im)),tmp_path,'dialogue')
+    result=np.asarray(Image.open(tmp_path/'cleaned.png'))
+    assert (result[92:129,92:159] == np.array([240,240,245])).all()
+
+
+def test_ui_cluster_is_protected_and_duplicate_tiles_do_not_inflate_count():
+    from manga_cleaner.pipeline import ui_protection
+    boxes=[{'x':20,'y':6000+i*70,'width':180,'height':25} for i in range(4)]
+    protected=ui_protection(boxes,14000,800)
+    assert protected[6200,100]
+    assert not protected[5500,100]
+    assert not ui_protection([boxes[0]]*6,14000,800).any()

@@ -23,10 +23,15 @@ class Store:
                 folder TEXT, link TEXT, review INTEGER NOT NULL DEFAULT 0)''')
             db.execute('CREATE INDEX IF NOT EXISTS jobs_queue ON jobs(state, created)')
 
+    @contextmanager
     def connect(self):
         db = sqlite3.connect(self.path, timeout=30)
         db.row_factory = sqlite3.Row
-        return db
+        try:
+            with db:
+                yield db
+        finally:
+            db.close()
 
     def get(self, identifier, owner=None):
         with self.connect() as db:

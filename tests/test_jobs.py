@@ -71,3 +71,20 @@ def test_processing_failure_releases_next_job(setup):
         assert worker.once()['id'] == a
         assert worker.once()['id'] == b
     assert store.get(a)['state'] == 'failed'
+
+
+def test_delivery_bundle_separates_clean_pages_from_masks(tmp_path):
+    import zipfile
+    from manga_cleaner.worker import bundle_results
+    output=tmp_path/'output';page=output/'0001';page.mkdir(parents=True)
+    (page/'cleaned.png').write_bytes(b'clean')
+    (page/'mask.png').write_bytes(b'mask')
+    (page/'overlay.png').write_bytes(b'overlay')
+    (page/'report.json').write_text('{}')
+    (output/'chapter-report.json').write_text('{}')
+    result=bundle_results(output,tmp_path/'delivery')
+    assert (result/'0001.png').read_bytes() == b'clean'
+    assert not (result/'mask.png').exists()
+    with zipfile.ZipFile(result/'review-artifacts.zip') as archive:
+        assert '0001/mask.png' in archive.namelist()
+        assert '0001/cleaned.png' not in archive.namelist()

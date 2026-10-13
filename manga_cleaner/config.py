@@ -13,6 +13,8 @@ class Settings:
     confidence: float = .35
     segmentation: float = .30
     dilation: int = 2
+    max_width: int = 8192
+    max_height: int = 100_000
     max_pixels: int = 40_000_000
     max_bytes: int = 50 * 1024 * 1024
     max_pages: int = 100
