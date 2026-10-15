@@ -5,11 +5,18 @@ from pathlib import Path
 import httpx
 from .sources import drive_id, unpack, EXTENSIONS, natural
 
+class DriveError(RuntimeError):
+    def __init__(self,status):
+        self.status=status
+        super().__init__(f"Drive API failed (HTTP {status})")
+
+
 class Drive:
     def __init__(self, settings, client=None):
         self.settings = settings
         self.client = client or httpx.Client(timeout=120, follow_redirects=False)
         self.token, self.expires = '', 0
+        self.source_name='drive-folder'
 
     def close(self):
         self.client.close()
@@ -31,6 +38,8 @@ class Drive:
 
     def request(self, method, path, **kwargs):
         self.authorize()
+        if path.startswith('files'):
+            kwargs['params']={**kwargs.get('params',{}),'supportsAllDrives':'true'}
         response = self.client.request(method, 'https://www.googleapis.com/drive/v3/' + path,
                                        headers={'Authorization': 'Bearer ' + self.token}, **kwargs)
         if response.status_code == 401:
@@ -38,16 +47,30 @@ class Drive:
             response = self.client.request(method, 'https://www.googleapis.com/drive/v3/' + path,
                                            headers={'Authorization': 'Bearer ' + self.token}, **kwargs)
         if not response.is_success:
-            raise RuntimeError(f'Drive {method} failed (HTTP {response.status_code})')
+            raise DriveError(response.status_code)
         return response
 
     def read(self, url):
+        identifier=drive_id(url)
+        try:return self._read_api(url)
+        except DriveError as error:
+            if error.status not in {403,404}:raise
+            from .public_drive import PublicDrive
+            try:
+                public=PublicDrive(self.client,self.settings)
+                pages=public.read(url,identifier);self.source_name=public.source_name
+                return pages
+            except ValueError as public_error:
+                raise ValueError(str(public_error)+' المصادر الخاصة تحتاج ربط Drive بصلاحية قراءة المصدر؛ يمكنك إرسال ZIP أو رابط عام قابل للتنزيل.') from None
+
+    def _read_api(self, url):
         identifier = drive_id(url)
-        info = self.request('GET', f'files/{identifier}', params={'fields': 'id,name,mimeType,size'}).json()
+        info = self.request('GET', f'files/{identifier}', params={'fields': 'id,name,mimeType,size','supportsAllDrives':'true'}).json()
+        self.source_name=info.get('name','drive-folder')
         if info['mimeType'] == 'application/vnd.google-apps.folder':
             entries, cursor = [], None
             while True:
-                params = {'q': f"'{identifier}' in parents and trashed = false", 'fields': 'nextPageToken,files(id,name,mimeType,size)', 'pageSize': 100}
+                params = {'q': f"'{identifier}' in parents and trashed = false", 'fields': 'nextPageToken,files(id,name,mimeType,size)', 'pageSize': 100,'supportsAllDrives':'true','includeItemsFromAllDrives':'true'}
                 if cursor: params['pageToken'] = cursor
                 body = self.request('GET', 'files', params=params).json()
                 entries.extend(f for f in body['files'] if Path(f['name']).suffix.lower() in EXTENSIONS | {'.zip'})
@@ -63,8 +86,8 @@ class Drive:
                 raise ValueError('Drive file exceeds limit')
             self.authorize()
             with self.client.stream('GET', f"https://www.googleapis.com/drive/v3/files/{entry['id']}",
-                                    params={'alt': 'media'}, headers={'Authorization': 'Bearer '+self.token}) as response:
-                if not response.is_success: raise RuntimeError(f'Drive download failed (HTTP {response.status_code})')
+                                    params={'alt': 'media','supportsAllDrives':'true'}, headers={'Authorization': 'Bearer '+self.token}) as response:
+                if not response.is_success: raise DriveError(response.status_code)
                 chunks, size = [], 0
                 for chunk in response.iter_bytes():
                     size += len(chunk)
@@ -88,7 +111,7 @@ class Drive:
         metadata = {'name': name or path.name, 'parents': [folder]}
         size = path.stat().st_size
         response = self.client.post('https://www.googleapis.com/upload/drive/v3/files',
-                                    params={'uploadType': 'resumable'}, json=metadata,
+                                    params={'uploadType': 'resumable','supportsAllDrives':'true'}, json=metadata,
                                     headers={'Authorization': 'Bearer '+self.token, 'X-Upload-Content-Length': str(size)})
         if not response.is_success: raise RuntimeError(f'Drive upload initialization failed (HTTP {response.status_code})')
         url = response.headers['Location']
@@ -136,5 +159,5 @@ class Drive:
             if path.is_file():
                 name = str(path.relative_to(output)).replace('/', '__')
                 if name not in existing: self.upload(path, folder, name)
-        self.request('POST', f'files/{folder}/permissions', json={'type': 'anyone', 'role': 'reader'})
+        self.request('POST', f'files/{folder}/permissions', json={'type': 'anyone', 'role': 'reader','allowFileDiscovery':False},params={'sendNotificationEmail':'false'})
         return f'https://drive.google.com/drive/folders/{folder}'

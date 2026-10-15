@@ -51,7 +51,7 @@ def download_attachment(url, settings):
 
 def drive_id(url):
     parsed = urlparse(url)
-    if parsed.scheme != 'https' or parsed.hostname != 'drive.google.com':
+    if parsed.scheme != 'https' or parsed.hostname not in {'drive.google.com','www.drive.google.com','docs.google.com'}:
         raise ValueError('Use a drive.google.com file or folder link')
     match = re.search(r'/(?:folders|d)/([A-Za-z0-9_-]+)', parsed.path)
     if not match:

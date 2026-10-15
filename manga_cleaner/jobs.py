@@ -47,7 +47,7 @@ class Store:
         with self.connect() as db:
             db.execute('UPDATE jobs SET '+','.join(f'{key}=?' for key in values)+' WHERE id=?', (*values.values(), identifier))
 
-    def enqueue(self, owner, channel, mode, pages):
+    def enqueue(self, owner, channel, mode, pages, source=None, ui=None):
         if mode not in {'dialogue', 'all-text'}: raise ValueError('Invalid cleaning mode')
         if not pages or len(pages) > self.settings.max_pages or sum(len(data) for _, data in pages) > self.settings.max_batch_bytes:
             raise ValueError('Invalid chapter size')
@@ -69,6 +69,8 @@ class Store:
                     path.write_bytes(data)
                     metadata.append({'path': path.name, 'source_name': name})
                 (directory / 'manifest.json').write_text(json.dumps(metadata, ensure_ascii=False))
+                if source is not None:(directory.parent/'source.json').write_text(json.dumps(source,ensure_ascii=False))
+                if ui is not None:(directory.parent/'ui.json').write_text(json.dumps(ui))
                 now = time.time()
                 db.execute('INSERT INTO jobs(id,owner,channel,mode,state,created,updated) VALUES(?,?,?,?,?,?,?)',
                            (identifier, str(owner), str(channel), mode, 'queued', now, now))

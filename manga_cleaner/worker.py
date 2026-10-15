@@ -19,6 +19,30 @@ def bundle_results(output, delivery):
                 archive.write(path, path.relative_to(output))
     return delivery
 
+
+def direct_results(root, manifest, source):
+    """Mirror original delivery: attachments -> images, ZIP -> ZIP, Drive -> Drive."""
+    if source.get('kind') not in {'images','zip'}:return False
+    delivery=root/'discord-delivery';shutil.rmtree(delivery,ignore_errors=True);delivery.mkdir()
+    import re
+    used=set()
+    for index,item in enumerate(manifest,1):
+        stem=re.sub(r'[\\/\r\n\x00-\x1f]','_',Path(item['source_name']).stem)[:150] or str(index)
+        name=stem+'-clean.png'
+        suffix=index
+        while name.casefold() in used:
+            name=f'{stem}-{suffix}-clean.png';suffix+=1
+        used.add(name.casefold());shutil.copyfile(root/'output'/f'{index:04d}'/'cleaned.png',delivery/name)
+    if source['kind']=='zip':
+        name=re.sub(r'[\\/\r\n\x00-\x1f]','_',source.get('name','chapter'))[:150] or 'chapter'
+        archive=root/(name+'-cleaned.zip')
+        with zipfile.ZipFile(archive,'w',zipfile.ZIP_STORED) as z:
+            for path in sorted(delivery.iterdir()):z.write(path,path.name)
+        shutil.rmtree(delivery);delivery.mkdir();shutil.move(archive,delivery/archive.name)
+    if sum(p.stat().st_size for p in delivery.iterdir())>int(source.get('discord_limit',24*1024*1024)):
+        shutil.rmtree(delivery);return False
+    return True
+
 class Worker:
     def __init__(self, settings, store, pipeline, drive):
         self.settings, self.store, self.pipeline, self.drive = settings, store, pipeline, drive
@@ -47,9 +71,16 @@ class Worker:
             review = any(report['status'] != 'completed' for report in reports)
             output.mkdir(parents=True, exist_ok=True)
             (output / 'chapter-report.json').write_text(json.dumps({'job_id': identifier, 'needs_review': review, 'pages': reports}, ensure_ascii=False, indent=2))
+            source_path=root/'source.json'
+            if source_path.exists() and direct_results(root,manifest,json.loads(source_path.read_text())):
+                self.store.patch(identifier,state='needs_review' if review else 'completed',link=None,error=None,review=int(review),progress='النتائج جاهزة للتسليم في Discord')
+                return self.store.get(identifier)
             phase = 'delivery'
             self.store.patch(identifier, state='uploading', review=int(review), progress='Uploading results to Drive')
-            folder = job['folder'] or self.drive.folder('Manhwa-' + identifier[:8])
+            source=json.loads(source_path.read_text()) if source_path.exists() else {}
+            import re
+            folder_name=re.sub(r'[\\/\r\n\x00-\x1f]','_',source.get('name','Manhwa-'+identifier[:8]))[:150]+'-cleaned'
+            folder = job['folder'] or self.drive.folder(folder_name)
             self.store.patch(identifier, folder=folder)
             delivery = bundle_results(output, root / 'delivery')
             link = self.drive.deliver(identifier, delivery, folder)
