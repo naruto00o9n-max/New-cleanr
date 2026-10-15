@@ -1,0 +1,1587 @@
+{
+  "schema": 1,
+  "scope": "dialogue and narration; preserve scene lettering and SFX",
+  "pages": [
+    {
+      "id": "arabic-original",
+      "file": "data/fixtures/real-page.jpg",
+      "url": "https://storage.azorafly.com/upload/series/counterattack-marriage/33fe63b9-028f-4060-b49d-97e2f994cb49/page-0001_1_1790632658183-399068.jpg",
+      "sha256": "76dd775c76b816df8cb1c10b6fd802d41ad6a2be70db7929ebee5c800378c0e0",
+      "split": "regression",
+      "targets": [
+        {
+          "name": "opening translucent caption",
+          "box": [
+            455,
+            1477,
+            246,
+            152
+          ],
+          "kind": "coverage"
+        },
+        {
+          "name": "blue offer dialogue",
+          "box": [
+            238,
+            2268,
+            315,
+            179
+          ],
+          "kind": "coverage"
+        },
+        {
+          "name": "arrival dialogue",
+          "box": [
+            170,
+            3936,
+            303,
+            211
+          ],
+          "kind": "coverage"
+        },
+        {
+          "name": "selling myself dialogue",
+          "box": [
+            252,
+            5499,
+            294,
+            203
+          ],
+          "kind": "coverage"
+        },
+        {
+          "name": "fourth meeting caption",
+          "box": [
+            85,
+            8307,
+            343,
+            190
+          ],
+          "kind": "coverage"
+        },
+        {
+          "name": "meetings caption",
+          "box": [
+            352,
+            9600,
+            360,
+            197
+          ],
+          "kind": "coverage"
+        },
+        {
+          "name": "intentions caption",
+          "box": [
+            83,
+            10641,
+            327,
+            154
+          ],
+          "kind": "coverage"
+        },
+        {
+          "name": "unboxed narration",
+          "box": [
+            172,
+            11260,
+            455,
+            216
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "director caption",
+          "box": [
+            329,
+            13353,
+            373,
+            211
+          ],
+          "kind": "coverage"
+        }
+      ],
+      "protected": [
+        {
+          "name": "sky and building",
+          "box": [
+            0,
+            0,
+            800,
+            1400
+          ]
+        },
+        {
+          "name": "interface behind woman",
+          "box": [
+            0,
+            5970,
+            800,
+            720
+          ]
+        },
+        {
+          "name": "tablet drawing",
+          "box": [
+            0,
+            9860,
+            800,
+            650
+          ]
+        },
+        {
+          "name": "male portrait",
+          "box": [
+            0,
+            11800,
+            800,
+            1400
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asura-original",
+      "file": "data/fixtures/asura-myst-119.webp",
+      "url": "https://cdn.asurascans.com/asura-images/chapters/myst-might-mayhem/119/8f0a68.webp?v=1791254885",
+      "sha256": "92b4ab2aa02ffd5e3a8090b531524bf5e31c9f8fd9d76d4d75be246dcfe8707c",
+      "split": "regression",
+      "targets": [
+        {
+          "name": "OW",
+          "box": [
+            583,
+            3023,
+            176,
+            111
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "AHHH WHAT",
+          "box": [
+            256,
+            3777,
+            181,
+            121
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "giant GAAH interior",
+          "box": [
+            410,
+            5100,
+            350,
+            240
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "WH WHAT",
+          "box": [
+            209,
+            7692,
+            282,
+            64
+          ],
+          "kind": "reference_rows",
+          "reference_box": [
+            505,
+            7692,
+            5,
+            64
+          ],
+          "left_reference_box": [
+            200,
+            7692,
+            5,
+            64
+          ],
+          "tolerance": 8
+        },
+        {
+          "name": "WHAT HAPPENED",
+          "box": [
+            398,
+            7857,
+            292,
+            121
+          ],
+          "kind": "reference_rows",
+          "reference_box": [
+            700,
+            7857,
+            5,
+            121
+          ],
+          "tolerance": 8,
+          "left_reference_box": [
+            370,
+            7857,
+            8,
+            121
+          ]
+        },
+        {
+          "name": "thought ellipsis",
+          "box": [
+            270,
+            9790,
+            90,
+            35
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "YET",
+          "box": [
+            543,
+            10578,
+            130,
+            59
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "NOT YET",
+          "box": [
+            238,
+            11373,
+            211,
+            69
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "THIS ISNT",
+          "box": [
+            324,
+            12512,
+            243,
+            68
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "OVER YET",
+          "box": [
+            258,
+            14123,
+            365,
+            110
+          ],
+          "kind": "dark"
+        }
+      ],
+      "protected": [
+        {
+          "name": "first action and SFX",
+          "box": [
+            0,
+            1640,
+            900,
+            1170
+          ]
+        },
+        {
+          "name": "middle art and SFX",
+          "box": [
+            0,
+            5560,
+            900,
+            1840
+          ]
+        },
+        {
+          "name": "body panel",
+          "box": [
+            0,
+            12900,
+            900,
+            650
+          ]
+        },
+        {
+          "name": "last action",
+          "box": [
+            0,
+            14500,
+            900,
+            1500
+          ]
+        }
+      ]
+    },
+    {
+      "id": "myst119-02",
+      "url": "https://cdn.asurascans.com/asura-images/chapters/myst-might-mayhem/119/620760.webp?v=1791254885",
+      "sha256": "569e1e843b46d0a7863a83c3caf7259167e518b1707a03f02e3110a3622666ef",
+      "file": "data/fixtures/myst119-02.webp",
+      "split": "regression",
+      "targets": [
+        {
+          "name": "SOON NEW BODY",
+          "box": [
+            269,
+            292,
+            333,
+            223
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "I SWEAR ILL BE BA",
+          "box": [
+            268,
+            2066,
+            348,
+            195
+          ],
+          "kind": "dark"
+        }
+      ],
+      "protected": [
+        {
+          "name": "eye and Korean SFX",
+          "box": [
+            0,
+            650,
+            900,
+            1250
+          ]
+        }
+      ],
+      "history": "Originally held out; clipped first-line glyphs exposed a failure. Moved to regression before fixing; do not count as untouched validation."
+    },
+    {
+      "id": "myst119-03",
+      "url": "https://cdn.asurascans.com/asura-images/chapters/myst-might-mayhem/119/2fd8e7.webp?v=1791254885",
+      "sha256": "6e9889772083a13471a30037e9226f4e6766057095fc705e027529ac36205667",
+      "file": "data/fixtures/myst119-03.webp",
+      "split": "development",
+      "targets": [
+        {
+          "name": "WH WHAT ARE YOU DOING",
+          "box": [
+            270,
+            3199,
+            277,
+            117
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "IT SURVIVED",
+          "box": [
+            163,
+            5423,
+            379,
+            134
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "MAKING SURE DEAD",
+          "box": [
+            438,
+            5664,
+            252,
+            141
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "OH RIGHT",
+          "box": [
+            367,
+            7406,
+            237,
+            40
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "punctuation white balloon",
+          "box": [
+            615,
+            11776,
+            106,
+            93
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "JUST AS I THOUGHT",
+          "box": [
+            135,
+            12756,
+            195,
+            84
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "THE EYE AND BODY",
+          "box": [
+            223,
+            14606,
+            464,
+            167
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "red punctuation banner",
+          "box": [
+            230,
+            2110,
+            480,
+            370
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "GACK ACK",
+          "box": [
+            259,
+            9007,
+            150,
+            125
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "IM DYING",
+          "box": [
+            407,
+            9233,
+            286,
+            70
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "WAIT STOP",
+          "box": [
+            255,
+            10280,
+            393,
+            226
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "small Ugh across frame",
+          "box": [
+            435,
+            7220,
+            83,
+            36
+          ],
+          "kind": "coverage"
+        }
+      ],
+      "protected": [
+        {
+          "name": "first artwork and SFX",
+          "box": [
+            0,
+            500,
+            900,
+            1450
+          ]
+        },
+        {
+          "name": "female action",
+          "box": [
+            0,
+            3900,
+            900,
+            1350
+          ]
+        },
+        {
+          "name": "chibi portrait",
+          "box": [
+            585,
+            7085,
+            260,
+            270
+          ]
+        },
+        {
+          "name": "last hand and SFX",
+          "box": [
+            0,
+            15000,
+            900,
+            1000
+          ]
+        }
+      ]
+    },
+    {
+      "id": "myst119-04",
+      "url": "https://cdn.asurascans.com/asura-images/chapters/myst-might-mayhem/119/6cab9e.webp?v=1791254885",
+      "sha256": "c4842bf0e75420950b363d1b5500f9503cbb542bb1835fd551ad92401a8d2482",
+      "file": "data/fixtures/myst119-04.webp",
+      "split": "regression",
+      "targets": [
+        {
+          "name": "UGH",
+          "box": [
+            309,
+            369,
+            168,
+            73
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "HEH HEH",
+          "box": [
+            107,
+            1260,
+            255,
+            58
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "HEH HEH HEH",
+          "box": [
+            296,
+            1428,
+            215,
+            112
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "single exclamation",
+          "box": [
+            673,
+            2337,
+            20,
+            53
+          ],
+          "kind": "paper"
+        }
+      ],
+      "protected": [
+        {
+          "name": "male panel and watermark",
+          "box": [
+            0,
+            1700,
+            900,
+            500
+          ]
+        }
+      ],
+      "history": "Inspected during development; retained as a regression case rather than counted as untouched final validation."
+    },
+    {
+      "id": "myst119-05",
+      "url": "https://cdn.asurascans.com/asura-images/chapters/myst-might-mayhem/119/091f5f.webp?v=1791254885",
+      "sha256": "a9837f16b0a55b8563253321a96181f463c9eced988d1b6ce7b0613f65c9fa43",
+      "file": "data/fixtures/myst119-05.webp",
+      "split": "development",
+      "targets": [
+        {
+          "name": "YOU STUPID HUMAN",
+          "box": [
+            192,
+            160,
+            271,
+            130
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "SHOULD NEVER GRAB ME",
+          "box": [
+            394,
+            397,
+            290,
+            175
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "ILL TAKE THAT BODY",
+          "box": [
+            259,
+            2320,
+            405,
+            228
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "GACK banner",
+          "box": [
+            448,
+            4558,
+            384,
+            235
+          ],
+          "kind": "dark",
+          "polygon": [
+            [
+              448,
+              4558
+            ],
+            [
+              832,
+              4558
+            ],
+            [
+              810,
+              4793
+            ],
+            [
+              448,
+              4793
+            ]
+          ]
+        },
+        {
+          "name": "GAAAH banner",
+          "box": [
+            70,
+            7370,
+            750,
+            325
+          ],
+          "kind": "dark",
+          "polygon": [
+            [
+              90,
+              7370
+            ],
+            [
+              820,
+              7370
+            ],
+            [
+              810,
+              7490
+            ],
+            [
+              820,
+              7695
+            ],
+            [
+              80,
+              7695
+            ],
+            [
+              105,
+              7510
+            ]
+          ]
+        },
+        {
+          "name": "UGH",
+          "box": [
+            221,
+            12777,
+            165,
+            74
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "WH WHAT IS THIS",
+          "box": [
+            202,
+            5518,
+            290,
+            79
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "YOUR BODY IS POISON",
+          "box": [
+            445,
+            5687,
+            257,
+            143
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "ellipsis",
+          "box": [
+            369,
+            8656,
+            89,
+            33
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "HOW SHOULD I PUT THIS",
+          "box": [
+            549,
+            9951,
+            232,
+            121
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "SHRIVELED UP",
+          "box": [
+            270,
+            11168,
+            364,
+            95
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "giant GAAAH upper glow must disappear",
+          "kind": "channel_ceiling",
+          "box": [
+            180,
+            7390,
+            500,
+            60
+          ],
+          "channel": 0,
+          "ceiling": 45,
+          "maximum_residual": 0.01
+        }
+      ],
+      "protected": [
+        {
+          "name": "first eye and fingers",
+          "box": [
+            0,
+            950,
+            900,
+            1200
+          ]
+        },
+        {
+          "name": "purple hand and SFX",
+          "box": [
+            0,
+            6000,
+            900,
+            1200
+          ]
+        },
+        {
+          "name": "chapter title",
+          "box": [
+            0,
+            13800,
+            900,
+            2200
+          ]
+        }
+      ]
+    },
+    {
+      "id": "myst119-06",
+      "url": "https://cdn.asurascans.com/asura-images/chapters/myst-might-mayhem/119/626923.webp?v=1791254885",
+      "sha256": "b3b0bf4545c38f604fcc42c5873ad589fd271bf714ea3458c47bf9737f53903a",
+      "file": "data/fixtures/myst119-06.webp",
+      "split": "regression",
+      "targets": [
+        {
+          "name": "UGH",
+          "box": [
+            180,
+            377,
+            175,
+            85
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "NO FURTHER USE",
+          "box": [
+            432,
+            1511,
+            283,
+            168
+          ],
+          "kind": "paper"
+        }
+      ],
+      "protected": [
+        {
+          "name": "hand eye and female",
+          "box": [
+            0,
+            650,
+            900,
+            650
+          ]
+        }
+      ],
+      "history": "Inspected during development; retained as a regression case rather than counted as untouched final validation."
+    },
+    {
+      "id": "nano1-004",
+      "url": "https://cdn.asurascans.com/asura-images/chapters-restored/nano-machine/1/004.webp?v=1777436809",
+      "sha256": "d4f6da4e82c2799c5e60aebf29d32983f8f08b5d3eb5876d955ed5997c6662ca",
+      "file": "data/fixtures/nano1-004.webp",
+      "split": "development",
+      "targets": [
+        {
+          "name": "YOU MUSTVE",
+          "box": [
+            439,
+            258,
+            252,
+            140
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "WELL DONE",
+          "box": [
+            540,
+            504,
+            170,
+            57
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "HEHE",
+          "box": [
+            534,
+            990,
+            125,
+            36
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "WAITING ASLEEP",
+          "box": [
+            367,
+            1383,
+            270,
+            89
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "WHAT SHOULD I DO",
+          "box": [
+            134,
+            2277,
+            159,
+            111
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "NO STRENGTH",
+          "box": [
+            514,
+            2995,
+            160,
+            103
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "WHY",
+          "box": [
+            112,
+            3638,
+            155,
+            46
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "GAVE UP ACADEMY",
+          "box": [
+            112,
+            3817,
+            292,
+            107
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "MY LIFE",
+          "box": [
+            499,
+            4773,
+            242,
+            113
+          ],
+          "kind": "paper"
+        }
+      ],
+      "protected": [
+        {
+          "name": "cloaked men",
+          "box": [
+            0,
+            650,
+            450,
+            600
+          ]
+        },
+        {
+          "name": "surrounded boy",
+          "box": [
+            50,
+            2500,
+            390,
+            400
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nano1-008",
+      "url": "https://cdn.asurascans.com/asura-images/chapters-restored/nano-machine/1/008.webp?v=1777436809",
+      "sha256": "b8fb89e4a43a855ed15c3cbe11640965abc793f1428dcba9df018cf7161aadb3",
+      "file": "data/fixtures/nano1-008.webp",
+      "split": "development",
+      "targets": [
+        {
+          "name": "double exclamation",
+          "box": [
+            638,
+            1379,
+            29,
+            46
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "LITTLE RETALIATION",
+          "box": [
+            313,
+            2813,
+            214,
+            77
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "WATCH OUT",
+          "box": [
+            228,
+            4494,
+            133,
+            86
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "HUH",
+          "box": [
+            391,
+            5044,
+            113,
+            45
+          ],
+          "kind": "paper"
+        }
+      ],
+      "protected": [
+        {
+          "name": "first action and SFX",
+          "box": [
+            0,
+            190,
+            800,
+            900
+          ]
+        },
+        {
+          "name": "two faces",
+          "box": [
+            0,
+            3000,
+            800,
+            500
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nano1-012",
+      "url": "https://cdn.asurascans.com/asura-images/chapters-restored/nano-machine/1/012.webp?v=1777436809",
+      "sha256": "030cf71d5f88d68f2f52cdecfa0bae2d579dbee271c74cb55d2e54528e14d337",
+      "file": "data/fixtures/nano1-012.webp",
+      "split": "regression",
+      "targets": [
+        {
+          "name": "SHIT AS I THOUGHT",
+          "box": [
+            97,
+            756,
+            238,
+            119
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "AT LEAST ONE",
+          "box": [
+            428,
+            1358,
+            251,
+            91
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "SLOWLY MORE",
+          "box": [
+            67,
+            1730,
+            171,
+            62
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "DIE AN EXCRUCIATING DEATH",
+          "box": [
+            244,
+            1877,
+            200,
+            96
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "punctuated scream",
+          "box": [
+            571,
+            2308,
+            155,
+            43
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "ellipsis",
+          "box": [
+            367,
+            3100,
+            80,
+            25
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "DOING SOMETHING",
+          "box": [
+            53,
+            3872,
+            217,
+            100
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "SINCE OUR COMRADE DIED",
+          "box": [
+            155,
+            4062,
+            234,
+            118
+          ],
+          "kind": "paper"
+        }
+      ],
+      "protected": [
+        {
+          "name": "hand panel",
+          "box": [
+            0,
+            1000,
+            350,
+            250
+          ]
+        },
+        {
+          "name": "Korean action effect",
+          "box": [
+            0,
+            2450,
+            800,
+            300
+          ]
+        }
+      ],
+      "history": "Inspected during development; retained as a regression case rather than counted as untouched final validation."
+    },
+    {
+      "id": "estate1-008",
+      "url": "https://cdn.asurascans.com/asura-images/chapters/the-greatest-estate-developer/1/008.webp?v=1770499638",
+      "file": "data/fixtures/estate1-008.webp",
+      "sha256": "653aee792fc2b0f242a37bfd8e1019e784910ee297596563f3682775ed627ffa",
+      "split": "heldout",
+      "targets": [
+        {
+          "name": "OUR FAMILY DEBT",
+          "box": [
+            144,
+            75,
+            341,
+            112
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "WHAT A STRANGE THING",
+          "box": [
+            388,
+            1511,
+            290,
+            70
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "CLACK",
+          "box": [
+            433,
+            2692,
+            168,
+            91
+          ],
+          "kind": "paper",
+          "polygon": [
+            [
+              433,
+              2725
+            ],
+            [
+              495,
+              2692
+            ],
+            [
+              601,
+              2692
+            ],
+            [
+              601,
+              2774
+            ],
+            [
+              433,
+              2783
+            ]
+          ]
+        },
+        {
+          "name": "ellipsis",
+          "box": [
+            570,
+            3938,
+            32,
+            13
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "I KNOW THE STORY",
+          "box": [
+            390,
+            4535,
+            307,
+            156
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "JUST LAST NIGHT",
+          "box": [
+            78,
+            5179,
+            342,
+            154
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "READ LAST CHAPTER",
+          "box": [
+            357,
+            5386,
+            252,
+            75
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "WHAT HAPPENS TO LLOYD",
+          "box": [
+            324,
+            6280,
+            377,
+            116
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "PART ONE",
+          "box": [
+            170,
+            6980,
+            480,
+            285
+          ],
+          "kind": "paper",
+          "regions": [
+            [
+              314,
+              6983,
+              184,
+              38
+            ],
+            [
+              266,
+              7024,
+              276,
+              36
+            ],
+            [
+              226,
+              7065,
+              360,
+              34
+            ],
+            [
+              174,
+              7104,
+              461,
+              37
+            ],
+            [
+              198,
+              7143,
+              412,
+              39
+            ],
+            [
+              205,
+              7184,
+              397,
+              37
+            ],
+            [
+              334,
+              7223,
+              142,
+              37
+            ]
+          ]
+        },
+        {
+          "name": "LLOYD BECOMES BEGGAR",
+          "box": [
+            176,
+            8826,
+            352,
+            244
+          ],
+          "kind": "paper",
+          "regions": [
+            [
+              300,
+              8830,
+              106,
+              34
+            ],
+            [
+              223,
+              8868,
+              259,
+              37
+            ],
+            [
+              180,
+              8912,
+              346,
+              32
+            ],
+            [
+              225,
+              8946,
+              253,
+              43
+            ],
+            [
+              267,
+              8990,
+              173,
+              35
+            ],
+            [
+              312,
+              9028,
+              79,
+              40
+            ]
+          ]
+        },
+        {
+          "name": "BRING ME MORE BEER",
+          "box": [
+            80,
+            9589,
+            278,
+            110
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "COUGHS BLOOD AND DIES",
+          "box": [
+            195,
+            10433,
+            252,
+            110
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "GLURGH",
+          "box": [
+            482,
+            10846,
+            151,
+            53
+          ],
+          "kind": "paper"
+        }
+      ],
+      "protected": [
+        {
+          "name": "male portrait",
+          "box": [
+            0,
+            250,
+            800,
+            750
+          ]
+        },
+        {
+          "name": "blue-haired portrait",
+          "box": [
+            0,
+            1700,
+            800,
+            570
+          ]
+        },
+        {
+          "name": "DU DUM effect and hands",
+          "box": [
+            0,
+            7400,
+            800,
+            700
+          ]
+        },
+        {
+          "name": "THUD effect",
+          "box": [
+            30,
+            9190,
+            330,
+            300
+          ]
+        },
+        {
+          "name": "SPLATTER left",
+          "box": [
+            80,
+            10660,
+            360,
+            250
+          ]
+        },
+        {
+          "name": "SPLATTER upper right",
+          "box": [
+            440,
+            10660,
+            240,
+            170
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nano2-005",
+      "url": "https://cdn.asurascans.com/asura-images/chapters-restored/nano-machine/2/005.webp?v=1777436809",
+      "file": "data/fixtures/nano2-005.webp",
+      "sha256": "e406d309bce78e80d998d31bd9f1e32f4150b7457fe7c35bf3ed232e3d3c9d15",
+      "split": "heldout",
+      "targets": [
+        {
+          "name": "WELL",
+          "box": [
+            62,
+            100,
+            115,
+            34
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "SCENE I SAW",
+          "box": [
+            70,
+            1559,
+            226,
+            115
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "COLD GROUND",
+          "box": [
+            153,
+            2827,
+            253,
+            121
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "CORPSES OF DEMONIC CULT",
+          "box": [
+            410,
+            3031,
+            226,
+            116
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "ONE WHO STILL HAD BREATH",
+          "box": [
+            86,
+            3508,
+            232,
+            156
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "DAGGER OF PRINCE",
+          "box": [
+            127,
+            4278,
+            281,
+            161
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "RIGHT THEN BREATHING",
+          "box": [
+            92,
+            5529,
+            243,
+            115
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "FAR FROM POOLS OF BLOOD",
+          "box": [
+            419,
+            6139,
+            286,
+            114
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "PRINCE CHEON",
+          "box": [
+            117,
+            6683,
+            243,
+            121
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "BUT",
+          "box": [
+            351,
+            7961,
+            116,
+            51
+          ],
+          "kind": "dark"
+        },
+        {
+          "name": "NO WOUNDS",
+          "box": [
+            55,
+            8660,
+            215,
+            102
+          ],
+          "kind": "paper"
+        },
+        {
+          "name": "YES",
+          "box": [
+            644,
+            9319,
+            86,
+            46
+          ],
+          "kind": "paper"
+        }
+      ],
+      "protected": [
+        {
+          "name": "bodies and landscape",
+          "box": [
+            0,
+            1800,
+            800,
+            950
+          ]
+        },
+        {
+          "name": "close-up artwork",
+          "box": [
+            0,
+            6900,
+            800,
+            850
+          ]
+        },
+        {
+          "name": "two faces",
+          "box": [
+            0,
+            8850,
+            800,
+            300
+          ]
+        }
+      ]
+    }
+  ],
+  "annotation_notes": "Text rectangles reviewed against source images; automated metrics are deliberately separate from detector confidence. Complex repair quality and frame continuity additionally reviewed visually. Coordinates are evaluation-only. Paragraph line selections and explicit polygons exclude balloon frames; the SPLATTER art selections exclude the separate GLURGH dialogue. These are source annotations, not inference masks."
+}

@@ -1,0 +1,878 @@
+{
+  "schema": 1,
+  "engine_fingerprint": "c9856998eb948fa086c38618b84100e9c0568861508d78887eb292467ac15aa3",
+  "check_only": false,
+  "cached_detector": true,
+  "passed": true,
+  "missing_pages": [],
+  "pages": [
+    {
+      "id": "arabic-original",
+      "split": "regression",
+      "automatic_status": "completed",
+      "passed": true,
+      "failures": [],
+      "targets": [
+        {
+          "name": "opening translucent caption",
+          "kind": "coverage",
+          "passed": true,
+          "ink_coverage": 1.0,
+          "source_contrast_pixels": 8791
+        },
+        {
+          "name": "blue offer dialogue",
+          "kind": "coverage",
+          "passed": true,
+          "ink_coverage": 1.0,
+          "source_contrast_pixels": 10652
+        },
+        {
+          "name": "arrival dialogue",
+          "kind": "coverage",
+          "passed": true,
+          "ink_coverage": 1.0,
+          "source_contrast_pixels": 10454
+        },
+        {
+          "name": "selling myself dialogue",
+          "kind": "coverage",
+          "passed": true,
+          "ink_coverage": 1.0,
+          "source_contrast_pixels": 10659
+        },
+        {
+          "name": "fourth meeting caption",
+          "kind": "coverage",
+          "passed": true,
+          "ink_coverage": 1.0,
+          "source_contrast_pixels": 12884
+        },
+        {
+          "name": "meetings caption",
+          "kind": "coverage",
+          "passed": true,
+          "ink_coverage": 1.0,
+          "source_contrast_pixels": 14635
+        },
+        {
+          "name": "intentions caption",
+          "kind": "coverage",
+          "passed": true,
+          "ink_coverage": 1.0,
+          "source_contrast_pixels": 11500
+        },
+        {
+          "name": "unboxed narration",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "director caption",
+          "kind": "coverage",
+          "passed": true,
+          "ink_coverage": 1.0,
+          "source_contrast_pixels": 27457
+        }
+      ],
+      "protected": [
+        {
+          "name": "sky and building",
+          "changed_pixels": 0
+        },
+        {
+          "name": "interface behind woman",
+          "changed_pixels": 0
+        },
+        {
+          "name": "tablet drawing",
+          "changed_pixels": 0
+        },
+        {
+          "name": "male portrait",
+          "changed_pixels": 0
+        }
+      ],
+      "outside_mask_unchanged": true
+    },
+    {
+      "id": "asura-original",
+      "split": "regression",
+      "automatic_status": "completed",
+      "passed": true,
+      "failures": [],
+      "targets": [
+        {
+          "name": "OW",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "AHHH WHAT",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "giant GAAH interior",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "WH WHAT",
+          "kind": "reference_rows",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "WHAT HAPPENED",
+          "kind": "reference_rows",
+          "passed": true,
+          "residual_fraction": 0.00017
+        },
+        {
+          "name": "thought ellipsis",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "YET",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "NOT YET",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "THIS ISNT",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "OVER YET",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        }
+      ],
+      "protected": [
+        {
+          "name": "first action and SFX",
+          "changed_pixels": 0
+        },
+        {
+          "name": "middle art and SFX",
+          "changed_pixels": 0
+        },
+        {
+          "name": "body panel",
+          "changed_pixels": 0
+        },
+        {
+          "name": "last action",
+          "changed_pixels": 0
+        }
+      ],
+      "outside_mask_unchanged": true
+    },
+    {
+      "id": "myst119-02",
+      "split": "regression",
+      "automatic_status": "completed",
+      "passed": true,
+      "failures": [],
+      "targets": [
+        {
+          "name": "SOON NEW BODY",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "I SWEAR ILL BE BA",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        }
+      ],
+      "protected": [
+        {
+          "name": "eye and Korean SFX",
+          "changed_pixels": 0
+        }
+      ],
+      "outside_mask_unchanged": true
+    },
+    {
+      "id": "myst119-03",
+      "split": "development",
+      "automatic_status": "completed",
+      "passed": true,
+      "failures": [],
+      "targets": [
+        {
+          "name": "WH WHAT ARE YOU DOING",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "IT SURVIVED",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "MAKING SURE DEAD",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "OH RIGHT",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "punctuation white balloon",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "JUST AS I THOUGHT",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "THE EYE AND BODY",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "red punctuation banner",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.002776
+        },
+        {
+          "name": "GACK ACK",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "IM DYING",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "WAIT STOP",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "small Ugh across frame",
+          "kind": "coverage",
+          "passed": true,
+          "ink_coverage": 1.0,
+          "source_contrast_pixels": 698
+        }
+      ],
+      "protected": [
+        {
+          "name": "first artwork and SFX",
+          "changed_pixels": 0
+        },
+        {
+          "name": "female action",
+          "changed_pixels": 0
+        },
+        {
+          "name": "chibi portrait",
+          "changed_pixels": 0
+        },
+        {
+          "name": "last hand and SFX",
+          "changed_pixels": 0
+        }
+      ],
+      "outside_mask_unchanged": true
+    },
+    {
+      "id": "myst119-04",
+      "split": "regression",
+      "automatic_status": "completed",
+      "passed": true,
+      "failures": [],
+      "targets": [
+        {
+          "name": "UGH",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "HEH HEH",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "HEH HEH HEH",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "single exclamation",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        }
+      ],
+      "protected": [
+        {
+          "name": "male panel and watermark",
+          "changed_pixels": 0
+        }
+      ],
+      "outside_mask_unchanged": true
+    },
+    {
+      "id": "myst119-05",
+      "split": "development",
+      "automatic_status": "completed",
+      "passed": true,
+      "failures": [],
+      "targets": [
+        {
+          "name": "YOU STUPID HUMAN",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "SHOULD NEVER GRAB ME",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "ILL TAKE THAT BODY",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "GACK banner",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.000125
+        },
+        {
+          "name": "GAAAH banner",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "UGH",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "WH WHAT IS THIS",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "YOUR BODY IS POISON",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "ellipsis",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "HOW SHOULD I PUT THIS",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "SHRIVELED UP",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "giant GAAAH upper glow must disappear",
+          "kind": "channel_ceiling",
+          "passed": true,
+          "residual_fraction": 0.0
+        }
+      ],
+      "protected": [
+        {
+          "name": "first eye and fingers",
+          "changed_pixels": 0
+        },
+        {
+          "name": "purple hand and SFX",
+          "changed_pixels": 0
+        },
+        {
+          "name": "chapter title",
+          "changed_pixels": 0
+        }
+      ],
+      "outside_mask_unchanged": true
+    },
+    {
+      "id": "myst119-06",
+      "split": "regression",
+      "automatic_status": "completed",
+      "passed": true,
+      "failures": [],
+      "targets": [
+        {
+          "name": "UGH",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "NO FURTHER USE",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        }
+      ],
+      "protected": [
+        {
+          "name": "hand eye and female",
+          "changed_pixels": 0
+        }
+      ],
+      "outside_mask_unchanged": true
+    },
+    {
+      "id": "nano1-004",
+      "split": "development",
+      "automatic_status": "completed",
+      "passed": true,
+      "failures": [],
+      "targets": [
+        {
+          "name": "YOU MUSTVE",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "WELL DONE",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "HEHE",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "WAITING ASLEEP",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "WHAT SHOULD I DO",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "NO STRENGTH",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "WHY",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "GAVE UP ACADEMY",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "MY LIFE",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        }
+      ],
+      "protected": [
+        {
+          "name": "cloaked men",
+          "changed_pixels": 0
+        },
+        {
+          "name": "surrounded boy",
+          "changed_pixels": 0
+        }
+      ],
+      "outside_mask_unchanged": true
+    },
+    {
+      "id": "nano1-008",
+      "split": "development",
+      "automatic_status": "completed",
+      "passed": true,
+      "failures": [],
+      "targets": [
+        {
+          "name": "double exclamation",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "LITTLE RETALIATION",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "WATCH OUT",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "HUH",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        }
+      ],
+      "protected": [
+        {
+          "name": "first action and SFX",
+          "changed_pixels": 0
+        },
+        {
+          "name": "two faces",
+          "changed_pixels": 0
+        }
+      ],
+      "outside_mask_unchanged": true
+    },
+    {
+      "id": "nano1-012",
+      "split": "regression",
+      "automatic_status": "completed",
+      "passed": true,
+      "failures": [],
+      "targets": [
+        {
+          "name": "SHIT AS I THOUGHT",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "AT LEAST ONE",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "SLOWLY MORE",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "DIE AN EXCRUCIATING DEATH",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "punctuated scream",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "ellipsis",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "DOING SOMETHING",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "SINCE OUR COMRADE DIED",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        }
+      ],
+      "protected": [
+        {
+          "name": "hand panel",
+          "changed_pixels": 0
+        },
+        {
+          "name": "Korean action effect",
+          "changed_pixels": 0
+        }
+      ],
+      "outside_mask_unchanged": true
+    },
+    {
+      "id": "estate1-008",
+      "split": "heldout",
+      "automatic_status": "completed",
+      "passed": true,
+      "failures": [],
+      "targets": [
+        {
+          "name": "OUR FAMILY DEBT",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "WHAT A STRANGE THING",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "CLACK",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "ellipsis",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "I KNOW THE STORY",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "JUST LAST NIGHT",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "READ LAST CHAPTER",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "WHAT HAPPENS TO LLOYD",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "PART ONE",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "LLOYD BECOMES BEGGAR",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 2.3e-05
+        },
+        {
+          "name": "BRING ME MORE BEER",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "COUGHS BLOOD AND DIES",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "GLURGH",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        }
+      ],
+      "protected": [
+        {
+          "name": "male portrait",
+          "changed_pixels": 0
+        },
+        {
+          "name": "blue-haired portrait",
+          "changed_pixels": 0
+        },
+        {
+          "name": "DU DUM effect and hands",
+          "changed_pixels": 0
+        },
+        {
+          "name": "THUD effect",
+          "changed_pixels": 0
+        },
+        {
+          "name": "SPLATTER left",
+          "changed_pixels": 0
+        },
+        {
+          "name": "SPLATTER upper right",
+          "changed_pixels": 0
+        }
+      ],
+      "outside_mask_unchanged": true
+    },
+    {
+      "id": "nano2-005",
+      "split": "heldout",
+      "automatic_status": "completed",
+      "passed": true,
+      "failures": [],
+      "targets": [
+        {
+          "name": "WELL",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "SCENE I SAW",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "COLD GROUND",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "CORPSES OF DEMONIC CULT",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "ONE WHO STILL HAD BREATH",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "DAGGER OF PRINCE",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "RIGHT THEN BREATHING",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "FAR FROM POOLS OF BLOOD",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "PRINCE CHEON",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "BUT",
+          "kind": "dark",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "NO WOUNDS",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        },
+        {
+          "name": "YES",
+          "kind": "paper",
+          "passed": true,
+          "residual_fraction": 0.0
+        }
+      ],
+      "protected": [
+        {
+          "name": "bodies and landscape",
+          "changed_pixels": 0
+        },
+        {
+          "name": "close-up artwork",
+          "changed_pixels": 0
+        },
+        {
+          "name": "two faces",
+          "changed_pixels": 0
+        }
+      ],
+      "outside_mask_unchanged": true
+    }
+  ],
+  "scope": "Annotated text/background and protected-art regression checks; textured repairs still require visual review. Not a universal accuracy estimate."
+}

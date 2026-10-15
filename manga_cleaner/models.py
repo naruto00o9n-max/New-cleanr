@@ -6,6 +6,7 @@ import numpy as np
 import cv2
 
 WEIGHTS = {
+    'speech-bubble-v11n.pt': ('https://huggingface.co/huyvux3005/manga109-segmentation-bubble/resolve/f9a4108c4955136a810e5e92207972f3fb3a65fd/best.pt', 'sha256', '4028152940f7c910f40192f46ede3b3f6c7129e5c76849c324d3564f8ac50198'),
     'comictextdetector.pt.onnx': ('https://github.com/zyddnys/manga-image-translator/releases/download/beta-0.2.1/comictextdetector.pt.onnx', 'sha256', '1a86ace74961413cbd650002e7bb4dcec4980ffa21b2f19b86933372071d718f'),
     'anime-manga-big-lama.pt': ('https://github.com/Sanster/models/releases/download/AnimeMangaInpainting/anime-manga-big-lama.pt', 'md5', '29f284f36a0a510bcacf39ecf4c4d54f'),
 }

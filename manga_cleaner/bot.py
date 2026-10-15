@@ -6,8 +6,7 @@ from discord import app_commands
 from .sources import unpack, download_attachment
 from .jobs import Store
 from .drive import Drive
-from .models import Detector, Inpainter
-from .pipeline import Pipeline
+from .runtime import create_pipeline
 from .worker import Worker
 
 LABELS = {'queued': 'في الطابور', 'running': 'جاري التبييض', 'uploading': 'جاري الرفع',
@@ -66,7 +65,7 @@ class CleanerBot(discord.Client):
 
     def register_commands(self):
         @self.tree.command(name='clean', description='تبييض صور أو ZIP أو رابط فصل Google Drive')
-        @app_commands.choices(mode=[app_commands.Choice(name='فقاعات الحوار فقط (محافظ)', value='dialogue'),
+        @app_commands.choices(mode=[app_commands.Choice(name='الحوار والسرد (افتراضي)', value='dialogue'),
                                    app_commands.Choice(name='كل النصوص، بما فيها المؤثرات والعلامات', value='all-text')])
         async def clean(interaction: discord.Interaction, attachment: discord.Attachment | None = None,
                         drive_url: str | None = None, mode: str = 'dialogue'):
@@ -125,7 +124,7 @@ def run(settings):
         drive = Drive(settings)
         try:
             drive.authorize()
-            pipeline = Pipeline(settings, Detector(settings), Inpainter(settings))
+            pipeline = create_pipeline(settings)
             bot = CleanerBot(settings, store, Worker(settings, store, pipeline, drive))
             bot.run(token)
         finally:

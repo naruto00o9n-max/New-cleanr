@@ -34,12 +34,11 @@ def main():
                           'drive_configured': all(os.getenv(k) for k in ('GDRIVE_CLIENT_ID', 'GDRIVE_CLIENT_SECRET', 'GDRIVE_REFRESH_TOKEN')),
                           'data_directory': str(settings.data)}, indent=2))
     elif args.command == 'clean':
-        from .models import Detector, Inpainter
-        from .pipeline import Pipeline
+        from .runtime import create_pipeline
         import numpy as np
         from PIL import Image
         mask = np.asarray(Image.open(args.mask).convert('L')) if args.mask else None
-        pipeline = Pipeline(settings, Detector(settings), Inpainter(settings))
+        pipeline = create_pipeline(settings)
         report = pipeline.clean(args.image.read_bytes(), args.output, args.mode, manual_mask=mask)
         print(json.dumps({k: v for k, v in report.items() if k not in {'boxes', 'after_boxes'}}, indent=2))
     elif args.command == 'bot':

@@ -1,0 +1,46 @@
+name: Full-page quality gate
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'manga_cleaner/quality.py'
+      - 'manga_cleaner/balloons.py'
+      - 'manga_cleaner/pipeline.py'
+      - 'manga_cleaner/models.py'
+      - 'manga_cleaner/config.py'
+      - 'manga_cleaner/runtime.py'
+      - 'manga_cleaner/provenance.py'
+      - 'manga_cleaner/evaluation.py'
+      - 'benchmarks/**'
+      - 'scripts/quality_benchmark.py'
+      - 'pyproject.toml'
+      - '.github/workflows/quality.yml'
+  pull_request:
+    paths:
+      - 'manga_cleaner/**'
+      - 'benchmarks/**'
+      - 'scripts/quality_benchmark.py'
+      - 'pyproject.toml'
+jobs:
+  full-pages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -e .
+      - uses: actions/cache@v4
+        with:
+          path: models
+          key: cleaner-models-${{ hashFiles('manga_cleaner/models.py') }}
+      - run: manhwa-cleaner prepare-models
+      - run: python scripts/quality_benchmark.py --download --output data/quality --compare benchmarks/accepted.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: full-page-quality-evidence
+          path: data/quality
+          retention-days: 14
