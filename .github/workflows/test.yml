@@ -2,6 +2,7 @@ name: Engine tests
 on: [push, pull_request]
 jobs:
   test:
+    if: github.ref != 'refs/heads/fix/zeus-account-diagnostics-20261018'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

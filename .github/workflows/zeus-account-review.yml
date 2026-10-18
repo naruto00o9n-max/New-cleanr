@@ -1,0 +1,25 @@
+name: ZEUS account response regression tests
+
+on:
+  push:
+    branches: [fix/zeus-account-diagnostics-20261018]
+    paths:
+      - zeus-text-bot-review/**
+      - .github/workflows/zeus-account-review.yml
+
+permissions:
+  contents: read
+
+jobs:
+  offline-regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout review branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Validate Python source
+        run: python3 -m compileall -q zeus-text-bot-review/text_bot zeus-text-bot-review/tests
+      - name: Test protection responses and disabled account rotation
+        run: python3 -m unittest discover -s zeus-text-bot-review/tests -v
